@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function NavBar() {
     return (
         <nav className="navbar navbar-expand-lg bg-white border-bottom">
@@ -33,33 +35,33 @@ function NavBar() {
                     <ul className="navbar-nav ms-auto align-items-lg-center gap-lg-3">
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/signup">
                                 Sign Up
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/about">
                                 About
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/products">
                                 Products
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/pricing">
                                 Pricing
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/support">
                                 Support
-                            </a>
+                            </Link>
                         </li>
 
                     </ul>

@@ -171,7 +171,7 @@ function Footer() {
 
 
                 {/* Bottom Section */}
-                <div className="border-top pt-4 pb-4">
+                <div className="border-top pt-4 pb-4 text-center">
 
                     <p className="text-muted small mb-2">
                         Aura is a personal investment platform created as

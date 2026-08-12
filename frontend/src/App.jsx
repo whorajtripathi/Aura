@@ -1,13 +1,17 @@
 import { useState } from 'react'
 // import './App.css'
 import HomePage from './landingPage/home/HomePage'
+import NavBar from './landingPage/NavBar'
+import { Outlet } from 'react-router-dom'
+import Footer from './landingPage/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <HomePage/>
+      <NavBar/>
+      <Outlet/>
+      <Footer/>
     </>
   )
 }
