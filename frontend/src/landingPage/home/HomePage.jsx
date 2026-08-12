@@ -12,15 +12,12 @@ import Stats from "./Stats";
 function HomePage(){
     return(
         <>
-            <NavBar/>
             <Hero/>
             <Award/>
             <Stats/>
             <PricingPage/>
             <Education/>
             <OpenAccount/>
-            <Footer/>
-            
         </>
     );
 }
