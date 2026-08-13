@@ -1,9 +1,9 @@
-
+import Hero from "./Hero";
 
 function ProductsPage(){
     return(
         <>
-            <h1>ProductsPage</h1>
+            <Hero/>
         </>
     );
 }
