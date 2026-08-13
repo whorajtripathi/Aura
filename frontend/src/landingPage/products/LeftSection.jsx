@@ -85,6 +85,11 @@ function LeftSection({
 
                 </div>
 
+                <p className="text-center">
+                    Want to know more about our technology stack? Check out the Zerodha.tech
+                    blog.
+                </p>
+
             </div>
         </section>
     );
