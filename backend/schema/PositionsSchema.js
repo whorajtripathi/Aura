@@ -1,10 +1,11 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-const posistionsSchema = new mongoose.Schema({
+const positionsSchema = new mongoose.Schema({
     product: {
         type: String,
         required: true,
     },
+
     name: {
         type: String,
         required: true,
@@ -34,10 +35,11 @@ const posistionsSchema = new mongoose.Schema({
     },
 
     isLoss: {
-        type: String,
-    }
+        type: Boolean,
+        default: false,
+    },
 });
 
-const PostionsModel = mongoose.model("Postions", posistionsSchema);
+const PostionsModel = mongoose.model("Position", positionsSchema);
 
-export default PostionsModel;
+module.exports = PostionsModel;
