@@ -2,15 +2,21 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
+const cors=require("cors");
+const bodyParser=require("body-parser");
 
 const HoldingsModel = require("./schema/HoldingSchema");
 const PositionsModel = require("./schema/PositionsSchema");
+
+
 
 const app = express();
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGODB_URI;
 
+app.use(cors());
+app.use(bodyParser.json());
 
 // ===============================
 // TEMPORARY HOLDINGS DATA
@@ -187,26 +193,26 @@ const tempPositions = [
 // ADD POSITIONS
 // ===============================
 
-app.get("/addPositions", async (req, res) => {
-    try {
+// app.get("/addPositions", async (req, res) => {
+//     try {
 
-        await PositionsModel.insertMany(tempPositions);
+//         await PositionsModel.insertMany(tempPositions);
 
-        res.status(201).json({
-            message: "Positions added successfully",
-            count: tempPositions.length,
-        });
+//         res.status(201).json({
+//             message: "Positions added successfully",
+//             count: tempPositions.length,
+//         });
 
-    } catch (error) {
+//     } catch (error) {
 
-        console.error("Error adding positions:", error);
+//         console.error("Error adding positions:", error);
 
-        res.status(500).json({
-            message: "Failed to add positions",
-            error: error.message,
-        });
-    }
-});
+//         res.status(500).json({
+//             message: "Failed to add positions",
+//             error: error.message,
+//         });
+//     }
+// });
 
 
 // ===============================
@@ -217,7 +223,19 @@ app.get("/", (req, res) => {
     res.send("Aura Backend is running!");
 });
 
+// ===============================
+// All Holdings 
+// ===============================
 
+app.get("/allHoldings",async(req,res)=>{
+    let allHoldings=await HoldingsModel.find({});
+    res.json(allHoldings);
+})
+
+app.get("/allPositions",async(req,res)=>{
+    let allPositions=await PositionsModel.find({});
+    res.json(allPositions); 
+})
 // ===============================
 // MONGODB CONNECTION
 // ===============================
