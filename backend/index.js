@@ -2,12 +2,12 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
-const cors=require("cors");
-const bodyParser=require("body-parser");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
 const HoldingsModel = require("./schema/HoldingSchema");
 const PositionsModel = require("./schema/PositionsSchema");
-
+const OrderModel = require("./schema/OrderSchema.js");
 
 
 const app = express();
@@ -227,15 +227,42 @@ app.get("/", (req, res) => {
 // All Holdings 
 // ===============================
 
-app.get("/allHoldings",async(req,res)=>{
-    let allHoldings=await HoldingsModel.find({});
+app.get("/allHoldings", async (req, res) => {
+    let allHoldings = await HoldingsModel.find({});
     res.json(allHoldings);
 })
 
-app.get("/allPositions",async(req,res)=>{
-    let allPositions=await PositionsModel.find({});
-    res.json(allPositions); 
+app.get("/allPositions", async (req, res) => {
+    let allPositions = await PositionsModel.find({});
+    res.json(allPositions);
 })
+
+
+app.post("/newOrder", async (req, res) => {
+    try {
+        const newOrder = new OrderModel({
+            name: req.body.name,
+            qty: req.body.qty,
+            price: req.body.price,
+            mode: req.body.mode,
+        });
+
+        await newOrder.save();
+
+        res.status(201).json({
+            message: "Order saved successfully",
+            order: newOrder,
+        });
+
+    } catch (error) {
+        console.error("Error saving order:", error);
+
+        res.status(500).json({
+            message: "Failed to save order",
+            error: error.message,
+        });
+    }
+});
 // ===============================
 // MONGODB CONNECTION
 // ===============================
