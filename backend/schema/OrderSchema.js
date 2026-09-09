@@ -1,7 +1,6 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema({
-    
     name: {
         type: String,
         required: true,
@@ -19,11 +18,10 @@ const orderSchema = new mongoose.Schema({
 
     mode: {
         type: String,
+        required: true,
     },
-
-    
 });
 
 const OrderModel = mongoose.model("Order", orderSchema);
 
-export default OrderModel;
+module.exports = OrderModel;
