@@ -3,7 +3,8 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
 const HoldingsModel = require("./schema/HoldingSchema");
 const PositionsModel = require("./schema/PositionsSchema");
@@ -14,10 +15,25 @@ const app = express();
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGODB_URI;
+const authRoute = require("./Routes/AuthRoute");
 
-app.use(cors());
-app.use(bodyParser.json());
 
+// app.use(cors());
+// app.use(bodyParser.json());
+// app.use("/", authRoute);
+
+app.use(
+    cors({
+        origin: "http://localhost:5173",
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true,
+    })
+);
+
+app.use(cookieParser());
+app.use(express.json());
+
+app.use("/", authRoute);
 // ===============================
 // TEMPORARY HOLDINGS DATA
 // ===============================
