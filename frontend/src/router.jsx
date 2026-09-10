@@ -5,7 +5,8 @@ import HomePage from "./landingPage/home/HomePage";
 import AboutPage from "./landingPage/about/AboutPage";
 import PricingPage from "./landingPage/pricing/PricingPage";
 import ProductsPage from "./landingPage/products/ProductsPage";
-import SignUp from "./landingPage/signUp/SignUp";
+import Signup from "./auth/Signup";
+import Login from "./auth/Login";
 import SupportPage from "./landingPage/support/SupportPage";
 import NotFound from "./landingPage/NotFound";
 
@@ -20,7 +21,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "signup",
-                element: <SignUp/>,
+                element: <Signup />,
+            },
+            {
+                path: "login",
+                element: <Login />,
             },
             {
                 path: "about",
@@ -28,7 +33,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "products",
-                element: <ProductsPage/>,
+                element: <ProductsPage />,
             },
             {
                 path: "pricing",
@@ -36,12 +41,12 @@ const router = createBrowserRouter([
             },
             {
                 path: "support",
-                element: <SupportPage/>,
+                element: <SupportPage />,
             },
             {
-                path:"*",
-                element:<NotFound/>,
-            }
+                path: "*",
+                element: <NotFound />,
+            },
         ],
     },
 ]);
