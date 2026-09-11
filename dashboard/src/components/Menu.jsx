@@ -27,7 +27,7 @@ function Menu() {
             );
 
             if (data.success) {
-                window.location.href = "http://localhost:5174/login";
+                window.location.href = "http://localhost:5173/login";
             }
         } catch (error) {
             console.error("LOGOUT ERROR:", error);
