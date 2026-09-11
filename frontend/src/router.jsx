@@ -10,6 +10,7 @@ import Login from "./auth/Login";
 import SupportPage from "./landingPage/support/SupportPage";
 import NotFound from "./landingPage/NotFound";
 
+
 const router = createBrowserRouter([
     {
         path: "/",

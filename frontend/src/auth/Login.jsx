@@ -1,16 +1,36 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const navigate = useNavigate();
 
   const [inputValue, setInputValue] = useState({
     email: "",
     password: "",
   });
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const { data } = await axios.get(
+          "http://localhost:3002/home",
+          {
+            withCredentials: true,
+          }
+        );
+
+        if (data.status) {
+          window.location.href = "http://localhost:5174/";
+        }
+      } catch (error) {
+        // User is not logged in
+      }
+    };
+
+    checkAuth();
+  }, []);
 
   const { email, password } = inputValue;
 
@@ -58,7 +78,7 @@ const Login = () => {
         handleSuccess(message);
 
         setTimeout(() => {
-          window.location.href = "http://localhost:5173";
+          window.location.href = "http://localhost:5174/";
         }, 1000);
       } else {
         handleError(message);
@@ -80,6 +100,8 @@ const Login = () => {
       password: "",
     });
   };
+
+
 
   return (
     <div className="form_container">
