@@ -1,61 +1,85 @@
+import "./Home.css";
+
 function Education() {
     return (
-        <div className="container my-5">
-            <div className="row align-items-center py-5">
+        <section className="home-section education-section">
 
-                {/* Left - Image */}
-                <div className="col-lg-6 text-center">
-                    <img
-                        src="images/education.svg"
-                        alt="Learn about investing"
-                        className="img-fluid"
-                    />
+            <div className="container">
+
+                <div className="section-label">
+                    <span>04</span>
+                    LEARN
                 </div>
 
-                {/* Right - Content */}
-                <div className="col-lg-6 mt-5 mt-lg-0">
 
-                    <h1 className="display-6 fw-semibold mb-4">
-                        Learn before you invest
-                    </h1>
+                <div className="education-grid">
 
-                    <p className="text-muted lh-lg mb-3">
-                        Understand the market with simple, practical
-                        resources designed for everyone — from your first
-                        investment to more advanced strategies.
-                    </p>
+                    {/* Image */}
+                    <div className="education-image">
 
-                    <a
-                        href="#"
-                        className="text-decoration-none"
-                    >
-                        Explore learning resources
-                        <i className="fa-solid fa-arrow-right ms-2"></i>
-                    </a>
+                        <div className="education-image-glow"></div>
+
+                        <img
+                            src="/images/education.svg"
+                            alt="Learn about investing"
+                        />
+
+                    </div>
 
 
-                    {/* Community */}
-                    <div className="mt-5">
+                    {/* Content */}
+                    <div className="education-content">
 
-                        <p className="text-muted lh-lg mb-3">
+                        <span className="home-eyebrow">
+                            KNOWLEDGE FIRST
+                        </span>
+
+                        <h2>
+                            Learn before
+                            <span> you invest.</span>
+                        </h2>
+
+                        <p>
+                            Understand the market with simple, practical
+                            resources designed for everyone — from your
+                            first investment to more advanced strategies.
+                        </p>
+
+                        <a href="#" className="aura-text-link">
+                            Explore learning resources
+                            <i className="fa-solid fa-arrow-right"></i>
+                        </a>
+
+
+                        <div className="education-divider"></div>
+
+
+                        <span className="home-eyebrow">
+                            COMMUNITY
+                        </span>
+
+                        <h3>
+                            Learn together.
+                        </h3>
+
+                        <p>
                             Connect with other investors, discuss market
                             trends, share ideas, and get answers to questions
                             from an active investing community.
                         </p>
 
-                        <a
-                            href="#"
-                            className="text-decoration-none"
-                        >
+                        <a href="#" className="aura-text-link">
                             Join the community
-                            <i className="fa-solid fa-arrow-right ms-2"></i>
+                            <i className="fa-solid fa-arrow-right"></i>
                         </a>
 
                     </div>
 
                 </div>
+
             </div>
-        </div>
+
+        </section>
     );
 }
 

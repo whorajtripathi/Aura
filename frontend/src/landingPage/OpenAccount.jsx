@@ -1,27 +1,40 @@
+import { useNavigate } from "react-router-dom";
+import "./home/Home.css";
+
 function OpenAccount() {
+    const navigate = useNavigate();
+
     return (
-        <div className="container my-5">
-            <div className="row justify-content-center text-center py-5">
+        <section className="home-cta">
+            <div className="cta-glow"></div>
 
-                <div className="col-lg-8">
+            <div className="container">
+                <div className="cta-content">
+                    <span className="home-eyebrow">
+                        START WITH AURA
+                    </span>
 
-                    <h1 className="display-6 fw-semibold mb-3">
-                        Start your investing journey
-                    </h1>
+                    <h2>
+                        Start your investing
+                        <span> journey.</span>
+                    </h2>
 
-                    <p className="text-muted fs-5 lh-lg mb-4">
-                        Get access to powerful market tools, real-time insights,
-                        and a simple investing experience — all in one place.
+                    <p>
+                        Get access to powerful market tools, real-time
+                        insights, and a simple investing experience —
+                        all in one place.
                     </p>
 
-                    <button className="btn btn-primary px-5 py-2">
+                    <button
+                        className="aura-primary-btn"
+                        onClick={() => navigate("/signup")}
+                    >
                         Create your account
+                        <i className="fa-solid fa-arrow-right"></i>
                     </button>
-
                 </div>
-
             </div>
-        </div>
+        </section>
     );
 }
 

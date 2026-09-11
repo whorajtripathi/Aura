@@ -1,107 +1,141 @@
+import "./About.css";
+
 function Team() {
     return (
-        <div className="container my-5">
+        <section className="about-developer">
 
-            <h1 className="text-center fw-semibold mb-3">
-                Meet the Developer
-            </h1>
+            <div className="container">
 
-            <div className="row align-items-center py-5">
+                <div className="developer-wrapper">
 
-                {/* Developer Image */}
-                <div className="col-lg-6 text-center">
-                    <img
-                        src="images/Raj_aura.jpg"
-                        alt="Aura Developer"
-                        className="img-fluid rounded"
-                        style={{ width: "70%", borderRadius:"100%" }}
-                    />
-                </div>
+                    {/* Developer Image */}
+                    {/* Developer Image + Social Links */}
+                    <div className="developer-image-section">
 
-                {/* Developer Information */}
-                <div className="col-lg-6 mt-5 mt-lg-0">
+                        <div className="developer-image-glow"></div>
 
-                    <h1 className="display-6 fw-semibold mb-2">
-                        Hey, I'm RST!!
-                    </h1>
+                        <div className="developer-image-container">
+                            <img
+                                src="/images/Raj_aura.jpg"
+                                alt="Aura Developer"
+                            />
+                        </div>
 
-                    <h5 className="text-muted mb-4">
-                        Computer Science & Engineering Student
-                    </h5>
+                        <div className="developer-image-label">
+                            <span></span>
+                            BUILT WITH AURA
+                        </div>
 
-                    <p className="text-muted lh-lg">
-                        I'm the developer behind Aura, a full-stack investment
-                        platform built to explore how modern financial
-                        applications can be designed and developed using
-                        technology.
-                    </p>
 
-                    <p className="text-muted lh-lg">
-                        I built Aura from the ground up as a MERN stack
-                        project, working across the frontend, backend,
-                        database, authentication, APIs, and overall user
-                        experience.
-                    </p>
+                        {/* Social Links */}
+                        <div className="developer-socials">
 
-                    <p className="text-muted lh-lg">
-                        The goal was not just to build a trading interface,
-                        but to understand how a real-world financial platform
-                        can be structured, developed, and scaled.
-                    </p>
+                            <a
+                                href="https://github.com/whorajtripathi"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="social-card github-card"
+                            >
+                                <div className="social-icon">
+                                    <i className="fa-brands fa-github"></i>
+                                </div>
 
-                    {/* Skills */}
-                    <div className="mt-4">
+                                <div className="social-info">
+                                    <span>GitHub</span>
+                                    <small>View my projects</small>
+                                </div>
 
-                        <h5 className="fw-semibold mb-3">
-                            Built with
-                        </h5>
+                                <i className="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+                            </a>
 
-                        <div className="d-flex flex-wrap gap-2">
-                            <span className="badge text-bg-light border p-2">
-                                React
-                            </span>
 
-                            <span className="badge text-bg-light border p-2">
-                                Node.js
-                            </span>
+                            <a
+                                href="https://www.linkedin.com/in/whorajtripathi/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="social-card linkedin-card"
+                            >
+                                <div className="social-icon">
+                                    <i className="fa-brands fa-linkedin-in"></i>
+                                </div>
 
-                            <span className="badge text-bg-light border p-2">
-                                Express.js
-                            </span>
+                                <div className="social-info">
+                                    <span>LinkedIn</span>
+                                    <small>Connect with me</small>
+                                </div>
 
-                            <span className="badge text-bg-light border p-2">
-                                MongoDB
-                            </span>
+                                <i className="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+                            </a>
 
-                            <span className="badge text-bg-light border p-2">
-                                JavaScript
-                            </span>
-
-                            <span className="badge text-bg-light border p-2">
-                                REST APIs
-                            </span>
                         </div>
 
                     </div>
 
-                    {/* Links */}
-                    <div className="mt-4">
 
-                        <a
-                            href="https://github.com/whorajtripathi"
-                            className="text-decoration-none me-4"
-                        >
-                            GitHub
-                            <i className="fa-solid fa-arrow-right ms-2"></i>
-                        </a>
+                    {/* Developer Information */}
+                    <div className="developer-content">
 
-                        <a
-                            href="https://www.linkedin.com/in/whorajtripathi/"
-                            className="text-decoration-none"
-                        >
-                            LinkedIn
-                            <i className="fa-solid fa-arrow-right ms-2"></i>
-                        </a>
+                        <span className="about-eyebrow">
+                            THE DEVELOPER
+                        </span>
+
+                        <h2>
+                            Hey, I'm
+                            <span> RST.</span>
+                        </h2>
+
+                        <h4>
+                            Computer Science & Engineering Student
+                        </h4>
+
+                        <div className="developer-description">
+
+                            <p>
+                                I'm the developer behind Aura, a full-stack
+                                investment platform built to explore how
+                                modern financial applications can be
+                                designed and developed using technology.
+                            </p>
+
+                            <p>
+                                I built Aura from the ground up as a MERN
+                                stack project, working across the frontend,
+                                backend, database, authentication, APIs,
+                                and overall user experience.
+                            </p>
+
+                            <p>
+                                The goal was not just to build a trading
+                                interface, but to understand how a
+                                real-world financial platform can be
+                                structured, developed, and scaled.
+                            </p>
+
+                        </div>
+
+
+                        {/* Technology */}
+                        <div className="developer-stack">
+
+                            <span className="stack-title">
+                                BUILT WITH
+                            </span>
+
+                            <div className="stack-list">
+
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>MongoDB</span>
+                                <span>JavaScript</span>
+                                <span>REST APIs</span>
+
+                            </div>
+
+                        </div>
+
+
+                        
 
                     </div>
 
@@ -109,7 +143,7 @@ function Team() {
 
             </div>
 
-        </div>
+        </section>
     );
 }
 

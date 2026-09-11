@@ -1,123 +1,192 @@
+import "./pricing.css";
+
 function PricingCards() {
     return (
-        <div className="container my-5 py-5">
+        <section className="pricing-cards-section">
 
-            <div className="text-center mb-5">
+            <div className="container">
 
-                <p className="text-uppercase text-primary fw-semibold small mb-2">
-                    Simple pricing
-                </p>
+                <div className="pricing-section-label">
+                    <span>01</span>
+                    CORE PRICING
+                </div>
 
-                <h1 className="display-5 fw-semibold mb-3">
-                    Know what you pay
-                </h1>
+                <div className="pricing-cards-header">
+                    <div>
+                        <span className="pricing-eyebrow">
+                            WHAT YOU PAY
+                        </span>
 
-                <p className="text-muted fs-5">
-                    Clear pricing with no complicated plans or unexpected
-                    surprises.
-                </p>
-
-            </div>
-
-            <div className="row g-4">
-
-                {/* Equity */}
-                <div className="col-lg-4">
-                    <div className="pricing-card h-100 text-center p-4">
-
-                        <div className="pricing-icon mb-4">
-                            <img
-                                src="images/pricingEquity.svg"
-                                alt="Equity investing"
-                            />
-                        </div>
-
-                        <h4 className="fw-semibold mb-3">
-                            Equity investing
-                        </h4>
-
-                        <div className="display-6 fw-semibold mb-3">
-                            ₹0
-                        </div>
-
-                        <p className="text-muted lh-lg">
-                            No brokerage on eligible equity delivery
-                            investments. Build your long-term portfolio
-                            without paying a brokerage fee.
-                        </p>
-
+                        <h2>
+                            Straightforward
+                            <span> pricing.</span>
+                        </h2>
                     </div>
+
+                    <p>
+                        Choose the products you need and understand the
+                        applicable brokerage before you get started.
+                    </p>
                 </div>
 
 
-                {/* Trading */}
-                <div className="col-lg-4">
-                    <div className="pricing-card h-100 text-center p-4">
+                <div className="row g-4 pricing-grid">
 
-                        <div className="pricing-icon mb-4">
-                            <img
-                                src="images/intradayTrades.svg"
-                                alt="Active trading"
-                            />
+                    {/* Equity */}
+                    <div className="col-lg-4">
+
+                        <div className="aura-pricing-card">
+
+                            <div className="pricing-card-top">
+                                <div className="pricing-icon">
+                                    <img
+                                        src="/images/pricingEquity.svg"
+                                        alt="Equity investing"
+                                    />
+                                </div>
+
+                                <span className="pricing-card-number">
+                                    01
+                                </span>
+                            </div>
+
+                            <span className="pricing-card-label">
+                                EQUITY
+                            </span>
+
+                            <h3>
+                                Equity investing
+                            </h3>
+
+                            <div className="pricing-amount">
+                                <span>₹</span>0
+                            </div>
+
+                            <p>
+                                No brokerage on eligible equity delivery
+                                investments. Build your long-term portfolio
+                                without paying a brokerage fee.
+                            </p>
+
+                            <div className="pricing-card-divider"></div>
+
+                            <span className="pricing-card-note">
+                                EQUITY DELIVERY
+                            </span>
+
                         </div>
-
-                        <h4 className="fw-semibold mb-3">
-                            Active trading
-                        </h4>
-
-                        <div className="display-6 fw-semibold mb-3">
-                            ₹20
-                        </div>
-
-                        <p className="text-muted lh-lg">
-                            Competitive pricing for intraday and derivatives,
-                            with charges calculated transparently on every
-                            executed order.
-                        </p>
 
                     </div>
+
+
+                    {/* Active Trading */}
+                    <div className="col-lg-4">
+
+                        <div className="aura-pricing-card pricing-card-featured">
+
+                            <div className="pricing-card-top">
+                                <div className="pricing-icon">
+                                    <img
+                                        src="/images/intradayTrades.svg"
+                                        alt="Active trading"
+                                    />
+                                </div>
+
+                                <span className="pricing-card-number">
+                                    02
+                                </span>
+                            </div>
+
+                            <span className="pricing-card-label">
+                                TRADING
+                            </span>
+
+                            <h3>
+                                Active trading
+                            </h3>
+
+                            <div className="pricing-amount">
+                                <span>₹</span>20
+                            </div>
+
+                            <p>
+                                Competitive pricing for intraday and
+                                derivatives, with charges calculated
+                                transparently on every executed order.
+                            </p>
+
+                            <div className="pricing-card-divider"></div>
+
+                            <span className="pricing-card-note">
+                                INTRADAY & DERIVATIVES
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    {/* Mutual Funds */}
+                    <div className="col-lg-4">
+
+                        <div className="aura-pricing-card">
+
+                            <div className="pricing-card-top">
+                                <div className="pricing-icon">
+                                    <img
+                                        src="/images/pricingEquity.svg"
+                                        alt="Mutual funds"
+                                    />
+                                </div>
+
+                                <span className="pricing-card-number">
+                                    03
+                                </span>
+                            </div>
+
+                            <span className="pricing-card-label">
+                                INVESTING
+                            </span>
+
+                            <h3>
+                                Mutual funds
+                            </h3>
+
+                            <div className="pricing-amount">
+                                <span>₹</span>0
+                            </div>
+
+                            <p>
+                                Invest in eligible direct mutual funds
+                                without additional distribution
+                                commissions.
+                            </p>
+
+                            <div className="pricing-card-divider"></div>
+
+                            <span className="pricing-card-note">
+                                DIRECT MUTUAL FUNDS
+                            </span>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
 
-                {/* Mutual Funds */}
-                <div className="col-lg-4">
-                    <div className="pricing-card h-100 text-center p-4">
+                <div className="pricing-disclaimer">
+                    <i className="fa-solid fa-circle-info"></i>
 
-                        <div className="pricing-icon mb-4">
-                            <img
-                                src="images/pricingEquity.svg"
-                                alt="Mutual funds"
-                            />
-                        </div>
-
-                        <h4 className="fw-semibold mb-3">
-                            Mutual funds
-                        </h4>
-
-                        <div className="display-6 fw-semibold mb-3">
-                            ₹0
-                        </div>
-
-                        <p className="text-muted lh-lg">
-                            Invest in eligible direct mutual funds without
-                            additional distribution commissions.
-                        </p>
-
-                    </div>
+                    <span>
+                        Applicable taxes, exchange fees, and regulatory
+                        charges may vary depending on the transaction.
+                    </span>
                 </div>
 
             </div>
 
-            <div className="text-center mt-5">
-
-                <p className="text-muted small">
-                    Applicable taxes, exchange fees, and regulatory charges
-                    may vary depending on the transaction.
-                </p>
-
-            </div>
-
-        </div>
+        </section>
     );
 }
 

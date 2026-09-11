@@ -7,6 +7,7 @@ function PricingPage() {
     return (
         <>
             <Hero />
+            <PricingCards />
             <BrokerageInfo />
         </>
     );
