@@ -4,6 +4,7 @@ import App from "./App";
 import HomePage from "./landingPage/home/HomePage";
 import AboutPage from "./landingPage/about/AboutPage";
 import PricingPage from "./landingPage/pricing/PricingPage";
+import ChargesPage from "./landingPage/pricing/ChargesPage";
 import ProductsPage from "./landingPage/products/ProductsPage";
 import Signup from "./auth/Signup";
 import Login from "./auth/Login";
@@ -16,38 +17,52 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
         children: [
+
             {
                 index: true,
                 element: <HomePage />,
             },
+
             {
                 path: "signup",
                 element: <Signup />,
             },
+
             {
                 path: "login",
                 element: <Login />,
             },
+
             {
                 path: "about",
                 element: <AboutPage />,
             },
+
             {
                 path: "products",
                 element: <ProductsPage />,
             },
+
             {
                 path: "pricing",
                 element: <PricingPage />,
             },
+
+            {
+                path: "pricing/charges",
+                element: <ChargesPage />,
+            },
+
             {
                 path: "support",
                 element: <SupportPage />,
             },
+
             {
                 path: "*",
                 element: <NotFound />,
             },
+
         ],
     },
 ]);

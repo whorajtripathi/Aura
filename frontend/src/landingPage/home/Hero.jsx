@@ -1,39 +1,53 @@
+import "./Home.css";
+
 function Hero() {
     return (
-        <div className="container">
-            <div className="row text-center justify-content-center py-5">
+        <section className="home-hero">
 
-                {/* Hero Image */}
-                <div className="col-12">
-                    <img
-                        src="images/homeHero.png"
-                        alt="Aura investment platform"
-                        className="img-fluid mb-5"
-                        style={{ maxHeight: "500px" }}
-                    />
-                </div>
+            <div className="hero-glow hero-glow-one"></div>
+            <div className="hero-glow hero-glow-two"></div>
 
-                {/* Hero Content */}
-                <div className="col-lg-8">
+            <div className="container">
 
-                    <h1 className="display-4 fw-semibold mb-3">
-                        Invest with confidence
+                <div className="hero-content">
+
+                    <span className="home-eyebrow">
+                        YOUR FINANCIAL SPACE
+                    </span>
+
+                    <h1>
+                        Invest with
+                        <span> confidence.</span>
                     </h1>
 
-                    <p className="text-muted fs-5 lh-lg mb-4">
+                    <p>
                         Discover markets, track your investments, and
                         manage your portfolio with a simple and powerful
                         investing platform.
                     </p>
 
-                    <button className="btn btn-primary px-5 py-3">
+                    <button className="aura-primary-btn">
                         Get started
+                        <i className="fa-solid fa-arrow-right"></i>
                     </button>
 
                 </div>
 
+
+                <div className="hero-image-wrapper">
+
+                    <div className="hero-image-glow"></div>
+
+                    <img
+                        src="/images/homeHero.png"
+                        alt="Aura investment platform"
+                    />
+
+                </div>
+
             </div>
-        </div>
+
+        </section>
     );
 }
 

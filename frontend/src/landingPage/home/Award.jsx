@@ -1,82 +1,108 @@
+import "./Home.css";
+
 function Award() {
     return (
-        <div className="container my-5">
-            <div className="row align-items-center py-5">
+        <section className="home-section capabilities-section">
 
-                {/* Left - Platform Image */}
-                <div className="col-lg-6 text-center">
-                    <img
-                        src="images/largestBroker.svg"
-                        alt="Aura platform"
-                        className="img-fluid"
-                        style={{ width: "80%" }}
-                    />
+            <div className="container">
+
+                <div className="section-label">
+                    <span>01</span>
+                    PLATFORM CAPABILITIES
                 </div>
 
-                {/* Right - Content */}
-                <div className="col-lg-6 mt-4 mt-lg-0">
 
-                    <h1 className="display-6 fw-semibold mb-3">
-                        Everything you need to invest
-                    </h1>
+                <div className="capabilities-grid">
 
-                    <p className="text-muted lh-lg">
-                        Aura brings the essential tools for modern investors
-                        together in one simple platform. Explore markets,
-                        track opportunities, and manage your investments
-                        with clarity.
-                    </p>
+                    {/* Image */}
+                    <div className="capabilities-image">
 
-                    {/* Features */}
-                    <div className="row mt-4 mb-4">
-
-                        <div className="col-6">
-                            <ul className="ps-3">
-                                <li className="mb-2">
-                                    Stocks & ETFs
-                                </li>
-                                <li className="mb-2">
-                                    Futures & Options
-                                </li>
-                                <li className="mb-2">
-                                    Market insights
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="col-6">
-                            <ul className="ps-3">
-                                <li className="mb-2">
-                                    Mutual funds
-                                </li>
-                                <li className="mb-2">
-                                    Bonds & IPOs
-                                </li>
-                                <li className="mb-2">
-                                    Portfolio tracking
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    {/* Press / Trust */}
-                    <div className="mt-4">
-                        <p className="text-muted small mb-3">
-                            Trusted by investors and featured across leading
-                            financial platforms.
-                        </p>
+                        <div className="image-glow"></div>
 
                         <img
-                            src="images/pressLogos.png"
-                            alt="Financial media"
-                            className="img-fluid"
+                            src="/images/largestBroker.svg"
+                            alt="Aura platform"
                         />
+
+                    </div>
+
+
+                    {/* Content */}
+                    <div className="capabilities-content">
+
+                        <span className="home-eyebrow">
+                            EVERYTHING YOU NEED
+                        </span>
+
+                        <h2>
+                            One platform.
+                            <span> Everything connected.</span>
+                        </h2>
+
+                        <p>
+                            Aura brings the essential tools for modern
+                            investors together in one simple platform.
+                            Explore markets, track opportunities, and
+                            manage your investments with clarity.
+                        </p>
+
+
+                        <div className="feature-grid">
+
+                            <div className="feature-item">
+                                <span>01</span>
+                                <strong>Stocks & ETFs</strong>
+                            </div>
+
+                            <div className="feature-item">
+                                <span>02</span>
+                                <strong>Mutual funds</strong>
+                            </div>
+
+                            <div className="feature-item">
+                                <span>03</span>
+                                <strong>Futures & Options</strong>
+                            </div>
+
+                            <div className="feature-item">
+                                <span>04</span>
+                                <strong>Bonds & IPOs</strong>
+                            </div>
+
+                            <div className="feature-item">
+                                <span>05</span>
+                                <strong>Market insights</strong>
+                            </div>
+
+                            <div className="feature-item">
+                                <span>06</span>
+                                <strong>Portfolio tracking</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div className="press-section">
+
+                            <p>
+                                Trusted by investors and featured across
+                                leading financial platforms.
+                            </p>
+
+                            <img
+                                src="/images/pressLogos.png"
+                                alt="Financial media"
+                            />
+
+                        </div>
+
                     </div>
 
                 </div>
+
             </div>
-        </div>
+
+        </section>
     );
 }
 
