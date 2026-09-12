@@ -1,0 +1,351 @@
+/* =========================================
+   AURA NAVBAR
+========================================= */
+
+.aura-navbar {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+
+    background: #0b1020;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.aura-navbar-inner {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.aura-navbar-logo {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+.aura-navbar-logo img {
+    width: 105px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+.aura-navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.aura-nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.aura-nav-links li {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.aura-nav-links a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+.aura-nav-links a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================
+   ACTIVE LINK
+========================================= */
+
+.aura-nav-links a.active {
+    color: #ffffff;
+}
+
+.aura-nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+
+    bottom: 3px;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #6366f1,
+        #8b5cf6
+    );
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.aura-nav-divider {
+    width: 1px;
+    height: 25px;
+
+    margin: 0 10px;
+
+    background: #e2e5eb;
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.aura-nav-links .aura-login-link {
+    color: #1e293b;
+
+    font-size: 16px;
+}
+
+.aura-nav-links .aura-login-link:hover {
+    color: #0f172a;
+}
+
+
+/* =========================================
+   GET STARTED BUTTON
+========================================= */
+
+.aura-nav-links .aura-signup-button {
+    margin-left: 4px;
+
+    padding: 11px 18px;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #7c3aed
+    );
+
+    border-radius: 11px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 25px rgba(99, 102, 241, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.aura-nav-links .aura-signup-button:hover {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #6d70ff,
+        #854dff
+    );
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 12px 30px rgba(99, 102, 241, 0.32);
+}
+
+.aura-signup-button i {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.aura-menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e2e5eb;
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    color: #0f172a;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.aura-menu-button:hover {
+    background: #f1f5f9;
+
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .aura-navbar-inner {
+        min-height: 70px;
+    }
+
+    .aura-menu-button {
+        display: flex;
+    }
+
+    .aura-navbar-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        padding: 15px;
+
+        background: rgba(255, 255, 255, 0.98);
+
+        border-bottom: 1px solid #e8eaf0;
+
+        box-shadow:
+            0 20px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    .aura-navbar-menu.aura-menu-open {
+        display: block;
+    }
+
+    .aura-nav-links {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+    }
+
+    .aura-nav-links a {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        padding: 13px 15px;
+
+        font-size: 16px;
+    }
+
+    .aura-nav-links a.active::after {
+        display: none;
+    }
+
+    .aura-nav-divider {
+        width: 100%;
+        height: 1px;
+
+        margin: 8px 0;
+
+        background: #e2e5eb;
+    }
+
+    .aura-nav-links .aura-signup-button {
+        justify-content: center;
+
+        margin-top: 5px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .aura-navbar-inner {
+        min-height: 64px;
+    }
+
+    .aura-navbar-logo img {
+        width: 92px;
+    }
+
+    .aura-menu-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .aura-navbar-menu {
+        top: 64px;
+    }
+}

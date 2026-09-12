@@ -6,16 +6,20 @@ function Hero() {
     return (
         <section id="supportHero">
 
+            <div className="support-hero-glow"></div>
+
             {/* Top bar */}
             <div className="container">
                 <div id="supportWrapper">
 
-                    <h4 className="mb-0">
-                        Aura Support
-                    </h4>
+                    <div className="support-brand">
+                        <span className="support-brand-dot"></span>
+                        <h4 className="mb-0">Aura Support</h4>
+                    </div>
 
                     <Link to="/support" className="track-link">
                         Track a ticket
+                        <i className="fa-solid fa-arrow-right ms-2"></i>
                     </Link>
 
                 </div>
@@ -23,20 +27,27 @@ function Hero() {
 
 
             {/* Hero content */}
-            <div className="container py-5">
+            <div className="container">
+                <div className="support-hero-content">
 
-                <div className="row align-items-center">
+                    <div className="support-hero-main">
 
-                    <div className="col-lg-8">
+                        <div className="support-eyebrow">
+                            <span className="support-eyebrow-line"></span>
+                            HELP CENTER
+                        </div>
 
-                        <h1 className="display-6 fw-semibold mb-3">
-                            How can we help?
+                        <h1>
+                            Need help?
+                            <br />
+                            <span>Let's find the answer.</span>
                         </h1>
 
-                        <p className="mb-4 support-subtitle">
-                            Search our help center or explore a topic
-                            to find the answers you need.
+                        <p className="support-subtitle">
+                            Search the Aura Help Center or explore a topic
+                            to find the information you need.
                         </p>
+
 
                         {/* Search */}
                         <div className="support-search">
@@ -45,16 +56,22 @@ function Hero() {
 
                             <input
                                 type="text"
-                                placeholder="Search for a question or topic..."
+                                placeholder="Search for a question, feature or topic..."
                             />
+
+                            <span className="search-shortcut">
+                                ⌘ K
+                            </span>
 
                         </div>
 
 
                         {/* Popular searches */}
-                        <div className="popular-searches mt-3">
+                        <div className="popular-searches">
 
-                            <span>Popular:</span>
+                            <span className="popular-label">
+                                Popular:
+                            </span>
 
                             <Link to="#">
                                 Account
@@ -78,34 +95,36 @@ function Hero() {
 
 
                     {/* Featured */}
-                    <div className="col-lg-4 mt-5 mt-lg-0">
+                    <div className="featured-box">
 
-                        <div className="featured-box">
+                        <div className="featured-top">
 
-                            <p className="small text-uppercase mb-2">
-                                Featured
-                            </p>
+                            <div className="featured-icon">
+                                <i className="fa-solid fa-sparkles"></i>
+                            </div>
 
-                            <h5>
-                                Platform updates
-                            </h5>
-
-                            <p className="small mb-3">
-                                Stay updated with new features,
-                                improvements, and important announcements.
-                            </p>
-
-                            <Link to="#">
-                                View updates
-                                <i className="fa-solid fa-arrow-right ms-2"></i>
-                            </Link>
+                            <span>FEATURED</span>
 
                         </div>
+
+                        <h5>
+                            Platform updates
+                        </h5>
+
+                        <p>
+                            Stay updated with new features,
+                            improvements, and important announcements
+                            across Aura.
+                        </p>
+
+                        <Link to="#">
+                            View updates
+                            <i className="fa-solid fa-arrow-right ms-2"></i>
+                        </Link>
 
                     </div>
 
                 </div>
-
             </div>
 
         </section>

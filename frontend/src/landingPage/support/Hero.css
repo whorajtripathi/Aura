@@ -1,132 +1,513 @@
+/* =========================================================
+   AURA SUPPORT HERO
+   ========================================================= */
+
 #supportHero {
-    background-color: #f4f8ff;
-    color: #172033;
-    border-bottom: 1px solid #e6eaf0;
+    position: relative;
+    overflow: hidden;
+    color: #f8fafc;
+    background:
+        radial-gradient(
+            circle at 55% 25%,
+            rgba(99, 102, 241, 0.16),
+            transparent 34%
+        ),
+        #050816;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
 }
 
+#supportHero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+.support-hero-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(99, 102, 241, 0.09);
+
+    filter: blur(100px);
+
+    top: 20%;
+    left: 52%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
 #supportWrapper {
+    position: relative;
+    z-index: 2;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
 }
 
-#supportWrapper h4 {
+.support-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.support-brand h4 {
+    color: #f8fafc;
+    font-size: 1rem;
     font-weight: 600;
+}
+
+.support-brand-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #818cf8;
+
+    box-shadow:
+        0 0 0 5px rgba(99, 102, 241, 0.1),
+        0 0 18px rgba(99, 102, 241, 0.7);
 }
 
 .track-link {
-    color: #0d6efd;
+    display: inline-flex;
+    align-items: center;
+
+    color: #a5b4fc;
     text-decoration: none;
+
+    font-size: 0.84rem;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
 }
 
 .track-link:hover {
-    text-decoration: underline;
+    color: #c4b5fd;
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.support-hero-content {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+
+    align-items: center;
+
+    gap: 90px;
+
+    padding: 105px 0 115px;
+}
+
+.support-hero-main {
+    max-width: 760px;
+}
+
+.support-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    color: #a5b4fc;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+.support-eyebrow-line {
+    width: 30px;
+    height: 1px;
+
+    background: #818cf8;
+}
+
+.support-hero-main h1 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+
+    font-weight: 700;
+}
+
+.support-hero-main h1 span {
+    background: linear-gradient(
+        100deg,
+        #c4b5fd,
+        #818cf8,
+        #6366f1
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .support-subtitle {
-    color: #667085;
-    font-size: 1.1rem;
+    max-width: 630px;
+
+    margin: 28px 0 30px;
+
+    color: #94a3b8;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
 .support-search {
-    background-color: white;
-    border: 1px solid #dfe3e8;
-    border-radius: 8px;
     display: flex;
     align-items: center;
+
+    width: 100%;
     max-width: 700px;
-    padding: 0 18px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+
+    min-height: 64px;
+
+    padding: 0 17px;
+
+    border: 1px solid rgba(148, 163, 184, 0.17);
+    border-radius: 15px;
+
+    background: rgba(15, 23, 42, 0.7);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+    backdrop-filter: blur(15px);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.support-search:focus-within {
+    border-color: rgba(129, 140, 248, 0.55);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2),
+        0 0 0 4px rgba(99, 102, 241, 0.08);
 }
 
 .search-icon {
-    color: #98a2b3;
+    flex-shrink: 0;
+
+    color: #64748b;
+
+    font-size: 0.95rem;
 }
 
 .support-search input {
-    width: 100%;
+    flex: 1;
+
+    min-width: 0;
+
     border: none;
     outline: none;
-    padding: 18px 12px;
-    font-size: 1rem;
+
+    padding: 19px 13px;
+
+    color: #f8fafc;
+
+    background: transparent;
+
+    font-size: 0.92rem;
 }
+
+.support-search input::placeholder {
+    color: #64748b;
+}
+
+.search-shortcut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 8px;
+
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    border-radius: 7px;
+
+    color: #64748b;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   POPULAR
+   ========================================================= */
 
 .popular-searches {
     display: flex;
-    gap: 18px;
     align-items: center;
     flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 18px;
 }
 
-.popular-searches span {
-    color: #667085;
-    font-size: 0.9rem;
+.popular-label {
+    margin-right: 3px;
+
+    color: #64748b;
+
+    font-size: 0.78rem;
 }
 
 .popular-searches a {
-    color: #0d6efd;
+    padding: 6px 11px;
+
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 100px;
+
+    color: #94a3b8;
+
+    background: rgba(15, 23, 42, 0.4);
+
     text-decoration: none;
-    font-size: 0.9rem;
+
+    font-size: 0.76rem;
+
+    transition: all 0.25s ease;
 }
 
 .popular-searches a:hover {
-    text-decoration: underline;
+    color: #c4b5fd;
+
+    border-color: rgba(129, 140, 248, 0.3);
+
+    background: rgba(99, 102, 241, 0.08);
 }
+
+
+/* =========================================================
+   FEATURED
+   ========================================================= */
 
 .featured-box {
-    background: white;
-    border: 1px solid #e1e5ea;
-    border-radius: 12px;
-    padding: 28px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    position: relative;
+
+    padding: 30px;
+
+    border: 1px solid rgba(148, 163, 184, 0.13);
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 41, 59, 0.62),
+            rgba(15, 23, 42, 0.38)
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+    backdrop-filter: blur(15px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.featured-box p:first-child {
-    color: #0d6efd;
-    font-weight: 600;
+.featured-box:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(129, 140, 248, 0.3);
+}
+
+.featured-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 28px;
+}
+
+.featured-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: #a5b4fc;
+
+    background: rgba(99, 102, 241, 0.1);
+
+    border: 1px solid rgba(129, 140, 248, 0.15);
+}
+
+.featured-top span {
+    color: #818cf8;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
 }
 
 .featured-box h5 {
+    margin-bottom: 12px;
+
+    color: #f8fafc;
+
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
 .featured-box p {
-    color: #667085;
+    margin-bottom: 24px;
+
+    color: #64748b;
+
+    font-size: 0.86rem;
+    line-height: 1.75;
 }
 
 .featured-box a {
-    color: #0d6efd;
+    display: inline-flex;
+    align-items: center;
+
+    color: #a5b4fc;
+
     text-decoration: none;
-}
 
-/* l */
+    font-size: 0.82rem;
+    font-weight: 600;
 
-.support-card {
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 28px;
-    background: #ffffff;
     transition: all 0.25s ease;
 }
 
-.support-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+.featured-box a:hover {
+    color: #c4b5fd;
+    transform: translateX(2px);
 }
 
-.support-card h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 10px;
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991px) {
+    .support-hero-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 90px 0 95px;
+    }
+
+    .featured-box {
+        max-width: 500px;
+    }
 }
 
-.support-card a {
-    color: #0d6efd;
-    text-decoration: none;
-    font-size: 0.95rem;
+@media (max-width: 767px) {
+    #supportWrapper {
+        padding: 20px 0;
+    }
+
+    .support-hero-content {
+        padding: 75px 0 80px;
+    }
+
+    .support-hero-main h1 {
+        font-size: clamp(2.8rem, 12vw, 4rem);
+    }
+
+    .support-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .support-search {
+        min-height: 58px;
+    }
+
+    .search-shortcut {
+        display: none;
+    }
+
+    .featured-box {
+        padding: 25px;
+    }
 }
 
-.support-card a:hover {
-    text-decoration: underline;
+@media (max-width: 480px) {
+    .track-link {
+        font-size: 0.76rem;
+    }
+
+    .support-brand h4 {
+        font-size: 0.92rem;
+    }
+
+    .support-hero-content {
+        padding: 65px 0 70px;
+    }
+
+    .popular-searches {
+        gap: 7px;
+    }
 }

@@ -1,193 +1,182 @@
+import { Link } from "react-router-dom";
+import "./Footer.css";
+
 function Footer() {
     return (
-        <footer
-            className="mt-5 pt-5"
-            style={{ backgroundColor: "#f5f5f5" }}
-        >
+        <footer className="aura-footer">
+
             <div className="container">
 
-                <div className="row pb-5">
+                {/* Main footer */}
+                <div className="aura-footer-main">
 
                     {/* Brand */}
-                    <div className="col-lg-3 mb-4">
-                        <img
-                            src="images/Aura_logo.png"
-                            alt="Aura"
-                            style={{ width: "60%" }}
-                            className="mb-3"
-                        />
+                    <div className="aura-footer-brand">
 
-                        <p className="text-muted small">
+                        <Link to="/">
+                            <img
+                                src="/images/Aura.png"
+                                alt="Aura"
+                            />
+                        </Link>
+
+                        <p>
                             A simple and powerful platform for exploring
                             markets, tracking investments, and managing
                             your portfolio.
                         </p>
 
-                        <p className="text-muted small">
-                            © 2026 Aura. All rights reserved.
-                        </p>
+                        <div className="aura-footer-socials">
 
-                        {/* Social Icons */}
-                        <div className="d-flex gap-3 mt-3">
-                            <a href="#" className="text-muted">
-                                <i className="fa-brands fa-x-twitter"></i>
-                            </a>
-
-                            <a href="#" className="text-muted">
-                                <i className="fa-brands fa-linkedin"></i>
-                            </a>
-
-                            <a href="#" className="text-muted">
+                            <a
+                                href="https://github.com/whorajtripathi"
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="GitHub"
+                            >
                                 <i className="fa-brands fa-github"></i>
                             </a>
 
-                            <a href="#" className="text-muted">
+                            <a
+                                href="https://www.linkedin.com/in/whorajtripathi/"
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="LinkedIn"
+                            >
+                                <i className="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a
+                                href="#"
+                                aria-label="X"
+                            >
+                                <i className="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a
+                                href="#"
+                                aria-label="Instagram"
+                            >
                                 <i className="fa-brands fa-instagram"></i>
                             </a>
+
                         </div>
+
                     </div>
 
 
                     {/* Platform */}
-                    <div className="col-lg-3 col-md-4 mb-4">
-                        <h6 className="fw-semibold mb-3">
-                            Platform
-                        </h6>
+                    <div className="aura-footer-column">
 
-                        <ul className="list-unstyled">
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Markets
-                                </a>
-                            </li>
+                        <h6>Platform</h6>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Watchlist
-                                </a>
-                            </li>
+                        <Link to="/products">
+                            Products
+                        </Link>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Portfolio
-                                </a>
-                            </li>
+                        <Link to="/pricing">
+                            Pricing
+                        </Link>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Orders
-                                </a>
-                            </li>
+                        <Link to="/signup">
+                            Get started
+                        </Link>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Pricing
-                                </a>
-                            </li>
-                        </ul>
+                        <Link to="/login">
+                            Log in
+                        </Link>
+
                     </div>
 
 
                     {/* Company */}
-                    <div className="col-lg-3 col-md-4 mb-4">
-                        <h6 className="fw-semibold mb-3">
-                            Company
-                        </h6>
+                    <div className="aura-footer-column">
 
-                        <ul className="list-unstyled">
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    About Aura
-                                </a>
-                            </li>
+                        <h6>Company</h6>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Careers
-                                </a>
-                            </li>
+                        <Link to="/about">
+                            About Aura
+                        </Link>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Blog
-                                </a>
-                            </li>
+                        <a href="#">
+                            Careers
+                        </a>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Press
-                                </a>
-                            </li>
+                        <a href="#">
+                            Blog
+                        </a>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Contact us
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="#">
+                            Contact
+                        </a>
+
                     </div>
 
 
                     {/* Resources */}
-                    <div className="col-lg-3 col-md-4 mb-4">
-                        <h6 className="fw-semibold mb-3">
-                            Resources
-                        </h6>
+                    <div className="aura-footer-column">
 
-                        <ul className="list-unstyled">
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Help Center
-                                </a>
-                            </li>
+                        <h6>Resources</h6>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Investment Guide
-                                </a>
-                            </li>
+                        <Link to="/support">
+                            Help Center
+                        </Link>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Market Insights
-                                </a>
-                            </li>
+                        <a href="#">
+                            Investment Guide
+                        </a>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Documentation
-                                </a>
-                            </li>
+                        <a href="#">
+                            Market Insights
+                        </a>
 
-                            <li className="mb-2">
-                                <a href="#" className="text-decoration-none text-muted">
-                                    Support
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="#">
+                            Documentation
+                        </a>
+
                     </div>
 
                 </div>
 
 
-                {/* Bottom Section */}
-                <div className="border-top pt-4 pb-4 text-center">
+                {/* Bottom */}
+                <div className="aura-footer-bottom">
 
-                    <p className="text-muted small mb-2">
-                        Aura is a personal investment platform created as
-                        a MERN stack learning project. The platform is
-                        designed for educational and demonstration purposes.
-                    </p>
+                    <div className="aura-footer-disclaimer">
 
-                    <p className="text-muted small mb-0">
-                        Market data, investment information, and portfolio
-                        values displayed on the platform may be simulated
-                        and should not be considered financial advice.
-                    </p>
+                        <p>
+                            © 2026 Aura. All rights reserved.
+                        </p>
+
+                        <p>
+                            Aura is a personal investment platform created
+                            as a MERN stack learning project. The platform
+                            is designed for educational and demonstration
+                            purposes.
+                        </p>
+
+                        <p>
+                            Market data, investment information, and portfolio
+                            values displayed on the platform may be simulated
+                            and should not be considered financial advice.
+                        </p>
+
+                    </div>
+
+                    <div className="aura-footer-status">
+
+                        <span className="status-dot"></span>
+
+                        <span>
+                            Platform online
+                        </span>
+
+                    </div>
 
                 </div>
 
             </div>
+
         </footer>
     );
 }
