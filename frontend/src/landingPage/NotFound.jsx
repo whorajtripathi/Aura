@@ -1,16 +1,44 @@
+import { Link } from "react-router-dom";
+import "./NotFound.css";
+
 function NotFound() {
     return (
-        <div className="container text-center py-5">
-            <h1 className="display-1 fw-bold">404!!</h1>
+        <main className="aura-not-found">
 
-            <h2 className="mb-3">
-                Page not found
-            </h2>
+            <div className="not-found-glow"></div>
 
-            <p className="text-muted mb-4">
-                Sorry, we couldn't find the page you're looking for.
-            </p>
-        </div>
+            <div className="container">
+
+                <div className="not-found-content">
+
+                    <div className="not-found-code">
+                        404
+                    </div>
+
+                    <div className="not-found-eyebrow">
+                        PAGE NOT FOUND
+                    </div>
+
+                    <h1>
+                        Looks like you've
+                        <span> drifted off course.</span>
+                    </h1>
+
+                    <p>
+                        The page you're looking for doesn't exist or
+                        may have moved somewhere else.
+                    </p>
+
+                    <Link to="/" className="not-found-button">
+                        Back to Aura
+                        <i className="fa-solid fa-arrow-right"></i>
+                    </Link>
+
+                </div>
+
+            </div>
+
+        </main>
     );
 }
 

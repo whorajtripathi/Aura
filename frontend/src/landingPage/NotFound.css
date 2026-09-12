@@ -1,0 +1,174 @@
+.aura-not-found {
+    position: relative;
+
+    min-height: 65vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: #f8fafc;
+
+    background: #050816;
+}
+
+.aura-not-found::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+}
+
+.not-found-glow {
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(99, 102, 241, 0.1);
+
+    filter: blur(100px);
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.not-found-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.not-found-code {
+    margin-bottom: 10px;
+
+    font-size: clamp(6rem, 15vw, 11rem);
+
+    line-height: 0.85;
+
+    font-weight: 700;
+
+    letter-spacing: -0.08em;
+
+    color: rgba(129, 140, 248, 0.12);
+}
+
+.not-found-eyebrow {
+    margin-bottom: 18px;
+
+    color: #818cf8;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+.not-found-content h1 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+.not-found-content h1 span {
+    background: linear-gradient(
+        100deg,
+        #c4b5fd,
+        #818cf8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.not-found-content p {
+    max-width: 500px;
+
+    margin: 24px auto 30px;
+
+    color: #64748b;
+
+    line-height: 1.8;
+
+    font-size: 0.92rem;
+}
+
+.not-found-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    border-radius: 11px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #7c3aed
+    );
+
+    box-shadow:
+        0 12px 30px rgba(99, 102, 241, 0.2);
+
+    text-decoration: none;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.not-found-button:hover {
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 35px rgba(99, 102, 241, 0.3);
+}

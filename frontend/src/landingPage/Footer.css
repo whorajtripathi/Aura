@@ -1,0 +1,294 @@
+/* =========================================================
+   AURA FOOTER
+   ========================================================= */
+
+.aura-footer {
+    position: relative;
+
+    padding: 85px 0 25px;
+
+    color: #cbd5e1;
+
+    background: #030611;
+
+    border-top: 1px solid rgba(148, 163, 184, 0.08);
+
+    overflow: hidden;
+}
+
+.aura-footer::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(99, 102, 241, 0.055);
+
+    filter: blur(100px);
+
+    left: 20%;
+    bottom: -200px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.aura-footer-main {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 70px;
+
+    padding-bottom: 65px;
+}
+
+.aura-footer-brand {
+    max-width: 330px;
+}
+
+.aura-footer-brand img {
+    width: 120px;
+    height: auto;
+
+    margin-bottom: 22px;
+}
+
+.aura-footer-brand p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 0.82rem;
+
+    line-height: 1.8;
+}
+
+.aura-footer-socials {
+    display: flex;
+
+    gap: 9px;
+
+    margin-top: 24px;
+}
+
+.aura-footer-socials a {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(148, 163, 184, 0.11);
+
+    border-radius: 9px;
+
+    color: #64748b;
+
+    background: rgba(15, 23, 42, 0.45);
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.aura-footer-socials a:hover {
+    color: #c4b5fd;
+
+    border-color: rgba(129, 140, 248, 0.3);
+
+    background: rgba(99, 102, 241, 0.08);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   COLUMNS
+   ========================================================= */
+
+.aura-footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.aura-footer-column h6 {
+    margin: 0 0 8px;
+
+    color: #f8fafc;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.aura-footer-column a {
+    width: fit-content;
+
+    color: #64748b;
+
+    text-decoration: none;
+
+    font-size: 0.82rem;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.aura-footer-column a:hover {
+    color: #c4b5fd;
+
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.aura-footer-bottom {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.aura-footer-disclaimer {
+    max-width: 850px;
+}
+
+.aura-footer-disclaimer p {
+    margin: 0 0 7px;
+
+    color: #475569;
+
+    font-size: 0.69rem;
+
+    line-height: 1.65;
+}
+
+.aura-footer-disclaimer p:first-child {
+    color: #64748b;
+
+    font-size: 0.72rem;
+}
+
+.aura-footer-disclaimer p:last-child {
+    margin-bottom: 0;
+}
+
+.aura-footer-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    color: #64748b;
+
+    font-size: 0.7rem;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #34d399;
+
+    box-shadow:
+        0 0 10px rgba(52, 211, 153, 0.6);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .aura-footer-main {
+        grid-template-columns: 1.5fr 1fr 1fr;
+
+        gap: 45px;
+    }
+
+    .aura-footer-brand {
+        grid-column: 1 / -1;
+
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .aura-footer {
+        padding-top: 65px;
+    }
+
+    .aura-footer-main {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 40px 30px;
+
+        padding-bottom: 45px;
+    }
+
+    .aura-footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .aura-footer-bottom {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .aura-footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .aura-footer-column {
+        gap: 11px;
+    }
+}

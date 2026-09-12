@@ -1,19 +1,20 @@
-import { useState } from 'react'
-// import './App.css'
-import HomePage from './landingPage/home/HomePage'
-import NavBar from './landingPage/NavBar'
-import { Outlet } from 'react-router-dom'
-import Footer from './landingPage/Footer'
+import ScrollToTop from "./ScrollToTop";
+import NavBar from "./landingPage/NavBar";
+import Footer from "./landingPage/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
+    return (
+        <>
+            <ScrollToTop />
 
-  return (
-    <>
-      <NavBar/>
-      <Outlet/>
-      <Footer/>
-    </>
-  )
+            <NavBar />
+
+            <Outlet />
+
+            <Footer />
+        </>
+    );
 }
 
-export default App
+export default App;

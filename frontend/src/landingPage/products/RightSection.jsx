@@ -1,92 +1,76 @@
+import "./products.css";
+
 function RightSection({
-    imageURL,
-    productName,
-    productTag,
-    productDescription,
-    tryDemo,
-    learnMore,
-    googlePlay,
-    appStore
+  imageURL,
+  productName,
+  productTag,
+  productDescription,
+  tryDemo,
+  learnMore,
+  googlePlay,
+  appStore,
+  number,
 }) {
-    return (
-        <section className="container my-5 py-5">
-            <div className="row align-items-center g-5">
+  return (
+    <section className="product-section product-section-reverse">
+      <div className="container">
+        <div className="product-section-inner">
+          <div className="product-content">
+            <div className="product-number">{number}</div>
 
-                {/* Content */}
-                <div className="col-lg-6">
+            <div className="product-tag">{productTag}</div>
 
-                    <p className="text-uppercase text-primary fw-semibold small mb-2">
-                        {productTag}
-                    </p>
+            <h2>{productName}</h2>
 
-                    <h1 className="display-6 fw-semibold mb-3">
-                        {productName}
-                    </h1>
+            <p className="product-description">
+              {productDescription}
+            </p>
 
-                    <p className="text-muted fs-5 lh-lg mb-4">
-                        {productDescription}
-                    </p>
+            <div className="product-actions">
+              <a href={tryDemo} className="product-primary-btn">
+                Try it
+                <i className="fa-solid fa-arrow-right"></i>
+              </a>
 
-                    <div className="mb-4">
-
-                        <a
-                            href={tryDemo}
-                            className="text-decoration-none me-4"
-                        >
-                            Try it out
-                            <i className="fa-solid fa-arrow-right ms-2"></i>
-                        </a>
-
-                        <a
-                            href={learnMore}
-                            className="text-decoration-none"
-                        >
-                            Learn more
-                            <i className="fa-solid fa-arrow-right ms-2"></i>
-                        </a>
-
-                    </div>
-
-                    {(googlePlay || appStore) && (
-                        <div className="d-flex align-items-center gap-3 mt-4">
-
-                            {googlePlay && (
-                                <a href={googlePlay}>
-                                    <img
-                                        src="images/googlePlayBadge.svg"
-                                        alt="Get it on Google Play"
-                                        style={{ height: "42px" }}
-                                    />
-                                </a>
-                            )}
-
-                            {appStore && (
-                                <a href={appStore}>
-                                    <img
-                                        src="images/appstoreBadge.svg"
-                                        alt="Download on the App Store"
-                                        style={{ height: "42px" }}
-                                    />
-                                </a>
-                            )}
-
-                        </div>
-                    )}
-
-                </div>
-
-                {/* Image */}
-                <div className="col-lg-6 text-center">
-                    <img
-                        src={imageURL}
-                        alt={productName}
-                        className="img-fluid product-image"
-                    />
-                </div>
-
+              <a href={learnMore} className="product-secondary-btn">
+                Learn more
+              </a>
             </div>
-        </section>
-    );
+
+            {(googlePlay !== "#" || appStore !== "#") && (
+              <div className="app-badges">
+                {googlePlay !== "#" && (
+                  <a href={googlePlay}>
+                    <img
+                      src="/images/googlePlayBadge.png"
+                      alt="Get it on Google Play"
+                    />
+                  </a>
+                )}
+
+                {appStore !== "#" && (
+                  <a href={appStore}>
+                    <img
+                      src="/images/appStoreBadge.png"
+                      alt="Download on the App Store"
+                    />
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+
+          <div className="product-image-wrapper">
+            <div className="product-image-glow"></div>
+
+            <div className="product-image-card">
+              <img src={`/${imageURL}`} alt={productName} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default RightSection;
