@@ -222,7 +222,7 @@ import { watchlist } from "../data/data";
 import { useContext, useState } from "react";
 
 import GeneralContext from "./GeneralContext";
-import { DoughNut } from "./Doughnut";
+import { DoughNut } from "./DoughNut";
 
 const WatchList = () => {
   const labels = watchlist.map((stock) => stock.name);

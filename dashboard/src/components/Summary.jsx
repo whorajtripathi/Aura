@@ -66,7 +66,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { VerticalGraph } from "./VerticalGraph";
-import { DoughNut } from "./Doughnut";
+import { DoughNut } from "./DoughNut";
 
 const Summary = () => {
   const navigate = useNavigate();
