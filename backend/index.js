@@ -25,6 +25,9 @@ const authRoute = require("./Routes/AuthRoute");
 const allowedOrigins = [
     "http://localhost:5173",
     "http://localhost:5174",
+
+    "https://aura-henna-kappa.vercel.app",
+    "https://aura-dashboard1-bag5acri6-rst2026.vercel.app",
 ];
 
 app.use(

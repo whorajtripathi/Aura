@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }) => {
     const verifyUser = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:3002/home",
+          "https://aura-vcj1.onrender.com/home",
           {
             withCredentials: true,
           }
@@ -18,12 +18,12 @@ const ProtectedRoute = ({ children }) => {
         if (data.status) {
           setAuthenticated(true);
         } else {
-          window.location.href = "http://localhost:5173/login";
+          window.location.href = "https://aura-henna-kappa.vercel.app/login";
         }
       } catch (error) {
         console.error("AUTH ERROR:", error);
 
-        window.location.href = "http://localhost:5173/login";
+        window.location.href = "https://aura-henna-kappa.vercel.app/login";
       } finally {
         setLoading(false);
       }
