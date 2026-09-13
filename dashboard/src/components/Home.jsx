@@ -1,15 +1,25 @@
-import React from "react";
+// import React from "react";
 
+// import Dashboard from "./Dashboard";
+// import TopBar from "./TopBar";
+
+// const Home = () => {
+//   return (
+//     <>
+//       <TopBar />
+//       <Dashboard />
+//     </>
+//   );
+// };
+
+// export default Home;
+
+
+import React from "react";
 import Dashboard from "./Dashboard";
-import TopBar from "./TopBar";
 
 const Home = () => {
-  return (
-    <>
-      <TopBar />
-      <Dashboard />
-    </>
-  );
+  return <Dashboard />;
 };
 
 export default Home;
