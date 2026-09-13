@@ -28,10 +28,17 @@ module.exports.Signup = async (req, res) => {
 
     const token = createSecretToken(user._id);
 
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   secure: process.env.NODE_ENV === "production",
+    //   sameSite: "lax",
+    // });
+
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      secure: true,
+      sameSite: "none",
+      path: "/",
     });
 
     return res.status(201).json({
@@ -95,10 +102,17 @@ module.exports.Login = async (req, res) => {
     const token = createSecretToken(user._id);
 
     // Store JWT in cookie
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   secure: process.env.NODE_ENV === "production",
+    //   sameSite: "lax",
+    // });
+
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      secure: true,
+      sameSite: "none",
+      path: "/",
     });
 
     return res.status(200).json({
@@ -128,10 +142,17 @@ module.exports.Login = async (req, res) => {
 // ===============================
 
 module.exports.Logout = (req, res) => {
+  // res.clearCookie("token", {
+  //   httpOnly: true,
+  //   secure: process.env.NODE_ENV === "production",
+  //   sameSite: "lax",
+  //   path: "/",
+  // });
+
   res.clearCookie("token", {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
+    secure: true,
+    sameSite: "none",
     path: "/",
   });
 
