@@ -18,14 +18,14 @@ const Signup = () => {
     const checkAuth = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:3002/home",
+          "https://aura-vcj1.onrender.com/home",
           {
             withCredentials: true,
           }
         );
 
         if (data.status) {
-          window.location.href = "http://localhost:5174/";
+          window.location.href = "https://aura-dashboard1-bag5acri6-rst2026.vercel.app/";
         }
       } catch (error) {
         // User is not logged in
@@ -63,7 +63,7 @@ const Signup = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/signup",
+        "https://aura-vcj1.onrender.com/signup",
         {
           email,
           password,

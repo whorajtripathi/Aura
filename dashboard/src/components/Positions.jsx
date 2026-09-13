@@ -65,7 +65,7 @@ const Positions = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/allPositions")
+      .get("https://aura-vcj1.onrender.com/allPositions")
       .then((res) => {
         setAllPostions(res.data);
       })

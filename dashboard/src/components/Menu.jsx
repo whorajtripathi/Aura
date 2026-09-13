@@ -152,7 +152,7 @@ function Menu() {
   const handleLogout = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/logout",
+        "https://aura-vcj1.onrender.com/logout",
         {},
         {
           withCredentials: true,
@@ -160,7 +160,7 @@ function Menu() {
       );
 
       if (data.success) {
-        window.location.href = "http://localhost:5173/login";
+        window.location.href = "https://aura-henna-kappa.vercel.app/login";
       }
     } catch (error) {
       console.error("LOGOUT ERROR:", error);
